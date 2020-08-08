@@ -6,12 +6,13 @@ import {
 import ListView from './pages/listView.page';
 import InfoView from './pages/InfoView.page';
 
+import "./assets/css/style.css";
 
 function App() {
   return (
     <Router>
       <Route path="/" component={ListView} exact/>
-      <Route path="/info" component={InfoView}/>
+      <Route path="/info/:id" component={InfoView}/>
     </Router>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getList } from '../services/common.service';
+import ListElementContainer from '../components/listElementContainer.component';
 
 const ListView = ()=>{
   const [listData, changeListData] = useState([]);
@@ -17,7 +18,7 @@ const ListView = ()=>{
     <div>
       {
         listData.map((element,index)=>{
-          return <li key={index}>{element.title}</li>
+          return <ListElementContainer key={index} props={{ id:element.id }}>{element.title}</ListElementContainer>
         })
       }
     </div>
