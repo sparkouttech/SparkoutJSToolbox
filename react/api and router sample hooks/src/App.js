@@ -5,15 +5,21 @@ import {
 } from "react-router-dom";
 import ListView from './pages/listView.page';
 import InfoView from './pages/InfoView.page';
-
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './redux/reducers';
 import "./assets/css/style.css";
+
+const store = createStore(reducer);
 
 function App() {
   return (
-    <Router>
-      <Route path="/" component={ListView} exact/>
-      <Route path="/info/:id" component={InfoView}/>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Route path="/" component={ListView} exact/>
+        <Route path="/info/:id" component={InfoView}/>
+      </Router>
+    </Provider>
   );
 }
 
