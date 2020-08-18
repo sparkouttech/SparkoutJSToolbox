@@ -1,0 +1,10 @@
+.masterContainer{
+  text-align: center;
+  margin-bottom: 3px;
+}
+.card{
+  display: flex;
+  flex-direction: rows;
+  margin-bottom: 3px;
+  justify-content: center;
+}
