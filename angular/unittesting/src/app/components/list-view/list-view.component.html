@@ -1,0 +1,8 @@
+<p>List View</p>
+
+<input type="text" #title/>
+<button (click)="postNewData(title.value)">add</button>
+
+<ol>
+  <li *ngFor="let listData of list">{{listData.title}}</li>
+</ol>
